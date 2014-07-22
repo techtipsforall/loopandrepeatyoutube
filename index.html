@@ -48,10 +48,18 @@
 				width:300px;
 			}
 		</style>
+		<script type="text/javascript">
+			$( document ).ready(function(){
+				var url = getParameterByName('u');
+				if(url != ''){
+					$('#text_url').val(url);
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<div class='container'>
-<center><h3>TTFA Loop and Share Youtube Videos<h3></center></br>
+			<center><h3>TTFA Loop and Share Youtube Videos<h3></center></br>
 			Youtube video URL : 
 			<input type='text' class='input w3' name='text_url' id='text_url' value="" />
 			
