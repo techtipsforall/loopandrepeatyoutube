@@ -15,6 +15,7 @@ var loopCount = 1;
 var flag = 0;
 
 function fnSearchVideo(){
+
 	var url = $('#text_url').val();
 	var v_id = gup(url,'v');
 	if(v_id != ''){
@@ -212,4 +213,10 @@ function onStateChange(status){
 			loopCount = loopCount + 1;
 		}
 	}
+}
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
